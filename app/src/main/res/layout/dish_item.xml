@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        app:cardBackgroundColor="@color/cardColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgDish"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="50dp"
+                android:scaleType="centerInside"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtTitleDish"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    tools:text="Title Of Dish"
+                    android:textStyle="bold"
+                    android:maxLines="5"
+                    android:layout_marginBottom="20dp"/>
+
+                <TextView
+                    android:id="@+id/txtFinalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Final Price: 00, 00 $"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnFavorite"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:tint="@color/heartColor"
+                        android:src="@drawable/heart_outline"
+                        android:scaleType="centerInside"
+                        android:background="@color/cardColor"
+                        android:layout_marginEnd="20dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMore"
+                        android:layout_width="wrap_content"
+                        app:backgroundTint="@color/cardButton"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="@color/cardItemContainer"
+                        android:layout_height="40dp"
+                        app:cornerRadius="5dp"
+                        android:text="More..."/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
